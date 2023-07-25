@@ -1,17 +1,17 @@
 {
-    "name": "zz-studio/think-addons",
-    "description": "The ThinkPHP6 Addons Package",
+    "name": "lxc939134342/think-addons",
+    "description": "The ThinkPHP8 Addons Package",
     "license": "Apache-2.0",
     "authors": [
         {
-            "name": "byron",
-            "email": "xiaobo.sun@qq.com"
+            "name": "lxc939134342",
+            "email": "939134342@qq.com"
         }
     ],
     "require": {
-        "php": ">=7.1.0",
-        "topthink/framework": "^6.0.0",
-        "topthink/think-view": "^1.0",
+        "php": ">=8.0.0",
+        "topthink/framework": "^8.0.0",
+        "topthink/think-view": "^2.0",
         "topthink/think-helper": "^3.0.0"
     },
     "autoload": {
@@ -27,12 +27,12 @@
             "services": [
                 "think\\addons\\Service"
             ],
-            "config":{
+            "config": {
                 "addons": "src/config.php"
             }
         }
     },
-    "scripts" : {
+    "scripts": {
         "post-install-cmd": [
             "php think addons:config"
         ]
