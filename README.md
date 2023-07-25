@@ -1,8 +1,12 @@
 # think-addons
-The ThinkPHP 6 Addons Package
+The ThinkPHP 8 Addons Package
+
+项目来源：https://github.com/zz-studio/think-addons
+
+tp6版本：composer require zzstudio/think-addons
 
 ## 安装
-> composer require zzstudio/think-addons
+> composer require lxc939134342/think-addons
 
 ## 配置
 
