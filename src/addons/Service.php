@@ -25,7 +25,7 @@ class Service extends \think\Service
         $this->addons_path = $this->getAddonsPath();
         // 加载系统语言包
         Lang::load([
-            $this->app->getRootPath() . '/vendor/zzstudio/think-addons/src/lang/zh-cn.php'
+            $this->app->getRootPath() . '/vendor/lxc939134342/think-addons/src/lang/zh-cn.php'
         ]);
         // 自动载入插件
         $this->autoload();
@@ -62,10 +62,10 @@ class Service extends \think\Service
                     foreach ($val['rule'] as $k => $rule) {
                         [$addon, $controller, $action] = explode('/', $rule);
                         $rules[$k] = [
-                            'addon'         => $addon,
-                            'controller'    => $controller,
-                            'action'        => $action,
-                            'indomain'      => 1,
+                            'addon' => $addon,
+                            'controller' => $controller,
+                            'action' => $action,
+                            'indomain' => 1,
                         ];
                     }
                     $route->domain($domain, function () use ($rules, $route, $execute) {
@@ -83,7 +83,7 @@ class Service extends \think\Service
                         ->name($key)
                         ->completeMatch(true)
                         ->append([
-                            'addon'  => $addon,
+                            'addon' => $addon,
                             'controller' => $controller,
                             'action' => $action
                         ]);
@@ -177,7 +177,7 @@ class Service extends \think\Service
             // 找到插件入口文件
             if (strtolower($info['filename']) === 'plugin') {
                 // 读取出所有公共方法
-                $methods = (array)get_class_methods("\\addons\\" . $name . "\\" . $info['filename']);
+                $methods = (array) get_class_methods("\\addons\\" . $name . "\\" . $info['filename']);
                 // 跟插件基类方法做比对，得到差异结果
                 $hooks = array_diff($methods, $base);
                 // 循环将钩子方法写入配置中
