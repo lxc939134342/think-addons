@@ -14,6 +14,7 @@
         "topthink/think-view": "^2.0",
         "topthink/think-helper": "^3.0.0"
     },
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "think\\": "src/"
